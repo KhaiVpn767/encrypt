@@ -4,7 +4,7 @@ wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/KhaiVpn767/encrypt/ma
 ```
 UPDATE SCRIPT
 ```
-rm -f /usr/bin/enc && wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/syfqsamvpn/encrypt/main/auto.sh" && chmod +x /usr/bin/enc
+rm -f /usr/bin/enc && wget -q -O /usr/bin/enc "https://raw.githubusercontent.com//KhaiVpn767/encrypt/main/auto.sh" && chmod +x /usr/bin/enc
 ```
 
 HOW TO USE
