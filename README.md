@@ -6,3 +6,10 @@ UPDATE SCRIPT
 ```
 rm -f /usr/bin/enc && wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/syfqsamvpn/encrypt/main/auto.sh" && chmod +x /usr/bin/enc
 ```
+
+HOW TO USE
+1. JUST UPLOAD YOUR SOURCE SCRIPT TO ANY PATH (DEFAULT : /root/khaienc)
+2. THEN TYPE 'enc' TO OPEN MENU
+3. ```
+   enc
+   ```
