@@ -62,19 +62,19 @@ encryptReqv1() {
   echo -e "\033[0;34mPLEASE INPUT YOUR TARGET PATH\033[0m"
   echo -e "\033[0;34mIF USE DEFAULT PATH , JUST CLICK ENTER\033[0m"
   echo ""
-  echo -ne "DIRECTORY [default: \E[44;1;39m/root/samenc\E[0m] : "
+  echo -ne "DIRECTORY [default: \E[44;1;39m/root/khaienc\E[0m] : "
   read dir
-  [[ -z $dir ]] && dir="/root/samenc"
-  ls -d $dir/*/ >/root/samdir
-  ls -d $dir/*/*/ >>/root/samdir
-  a=$(cat /root/samdir)
+  [[ -z $dir ]] && dir="/root/khaienc"
+  ls -d $dir/*/ >/root/khaidir
+  ls -d $dir/*/*/ >>/root/khaidir
+  a=$(cat /root/khaidir)
   for b in $a; do
-    ls $b*.sh >>/root/samdirfile
+    ls $b*.sh >>/root/khaidirfile
     clear
   done
-  ls $dir/*.sh >/root/samencfile
-  auto=$(cat /root/samencfile)
-  encdir=$(cat /root/samdirfile)
+  ls $dir/*.sh >/root/khaiencfile
+  auto=$(cat /root/khaiencfile)
+  encdir=$(cat /root/khaidirfile)
   for encc in $encdir; do
     shc -r -f $encc
   done
@@ -92,9 +92,9 @@ encryptReqv1() {
     done
   done
   rm -f /$dir/*.c
-  rm -f /root/samdir
-  rm -f /root/samencfile
-  rm -f /root/samdirfile
+  rm -f /root/khaidir
+  rm -f /root/khaiencfile
+  rm -f /root/khaidirfile
   clear
   echo -e '\e[0;32mDONE ENCRYPT\033[0m'
   echo -e ''
@@ -108,19 +108,19 @@ encryptReqv2() {
   echo -e "\033[0;34mPLEASE INPUT YOUR TARGET PATH\033[0m"
   echo -e "\033[0;34mIF USE DEFAULT PATH , JUST CLICK ENTER\033[0m"
   echo ""
-  echo -ne "DIRECTORY [default: \E[44;1;39m/root/samenc\E[0m] : "
+  echo -ne "DIRECTORY [default: \E[44;1;39m/root/khaienc\E[0m] : "
   read dir
-  [[ -z $dir ]] && dir="/root/samenc"
-  ls -d $dir/*/ >/root/samdir
-  ls -d $dir/*/*/ >>/root/samdir
-  a=$(cat /root/samdir)
+  [[ -z $dir ]] && dir="/rootkhaienc"
+  ls -d $dir/*/ >/root/khaidir
+  ls -d $dir/*/*/ >>/root/khaidir
+  a=$(cat /root/khaidir)
   for b in $a; do
-    ls $b*.sh >>/root/samdirfile
+    ls $b*.sh >>/root/khaidirfile
     clear
   done
-  ls $dir/*.sh >/root/samencfile
-  auto=$(cat /root/samencfile)
-  encdir=$(cat /root/samdirfile)
+  ls $dir/*.sh >/root/khaiencfile
+  auto=$(cat /root/khaiencfile)
+  encdir=$(cat /root/khaidirfile)
   for encc in $encdir; do
     shc -r -v -f $encc
   done
@@ -138,9 +138,9 @@ encryptReqv2() {
     done
   done
   rm -f /$dir/*.c
-  rm -f /root/samdir
-  rm -f /root/samencfile
-  rm -f /root/samdirfile
+  rm -f /rootkhaidir
+  rm -f /root/khaiencfile
+  rm -f /root/khaidirfile
   clear
   echo -e '\e[0;32mDONE ENCRYPT\033[0m'
   echo -e ''
@@ -160,14 +160,14 @@ if [ ! -f /usr/bin/zip ]; then
   apt install git -y &>/dev/null
 fi
 if [ ! -d /root/samenc ]; then
-  mkdir /root/samenc
+  mkdir /root/khaienc
 else
   echo -ne "[ ${yell}WARNING${NC} ] Do you want to Clear Encrypt Folder ? (y/n)? "
   read answer
   if [ "$answer" == "${answer#[Yy]}" ]; then
     echo ""
   else
-    rm -rf /root/samenc/*
+    rm -rf /root/khaienc/*
   fi
 fi
 clear
